@@ -249,61 +249,18 @@ function undoBookFromComplete(bookId) {
 // Untuk pencarian buku berdasarkan judul buku atau penulis
 function searchingBook() {
   const searchInput = document.getElementById('search-input').value.toLowerCase();
-  // const serializedData = localStorage.getItem(STORAGE_KEY);
-  // const data = JSON.parse(serializedData);
-  // const datas = data.filter(function(bookObject) {
-  //   return (
-  //     bookObject.titles.toLowerCase().includes(searchInput) || 
-  //     bookObject.authors.toLowerCase().includes(searchInput)
-  //   );
-  // });
-
-  // if(datas.length === 0) {
-  //   modalSearchDisplay.style.display = 'block';
-  //   return setTimeout((function() {
-  //     location.reload();
-  //   }), 4000);
-  // }
-const bookListed = document.querySelectorAll('.book__item > .book__detail');
+  const bookListed = document.querySelectorAll('.book__item > .book__detail');
 
   for(let book of bookListed) {
     console.log(book);
     const title = book.childNodes[0];
     const author = book.childNodes[1];
-    console.log(title);
-    console.log(!title.innerText.toLowerCase().includes(searchInput));
     if(title.innerText.toLowerCase().includes(searchInput) || author.innerText.toLowerCase().includes(searchInput)) {
       title.parentElement.parentElement.style.display = "display";
     } else {
       title.parentElement.parentElement.style.display = "none";
     }
   }
-
-
-
-  // console.log(datas);
-  // for(let book of bookListed) {
-  //   if (searchInput == book.innerText) {
-  //     console.log(book.innerText, 'poo');
-  //     // book.parentElement.remove();
-  //     book.style.display = "block";
-  //   } else {
-  //     book.style.display = "";
-  //     console.log(book.innerText, "ypp");
-  //   }
-  // }
-
-  // if(searchInput !== '') {
-  //   bookList = [];
-  //   for(const item of datas) {
-  //     bookList.push(item);
-  //     console.log(item);
-  //   }
-  //   document.dispatchEvent(new Event(RENDER_EVENT));
-  // } else {
-  //   bookList = [];
-  //   loadDataFromStorage();
-  // }
 }
 
 // Menyimpan data ke local storage
