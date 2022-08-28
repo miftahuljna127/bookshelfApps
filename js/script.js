@@ -252,7 +252,6 @@ function searchingBook() {
   const bookListed = document.querySelectorAll('.book__item > .book__detail');
 
   for(let book of bookListed) {
-    console.log(book);
     const title = book.childNodes[0];
     const author = book.childNodes[1];
     if(title.innerText.toLowerCase().includes(searchInput) || author.innerText.toLowerCase().includes(searchInput)) {
