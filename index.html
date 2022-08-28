@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps | Miftahul Janna</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Bookshelf Apps</h1>
+    <button id="add-book-button" class="plus__button" title="Tambah Buku"></button>
+  </header>
+  <main>
+    <section class="container search__wrapper">
+      <form action="#" id="search-books">
+        <span><img src="./assets/search.svg" alt=""></span>
+        <input type="search" id="search-input" name="search" placeholder="Cari buku, penulis...">
+        <button id="search-submit" type="submit">Cari</button>
+      </form>
+    </section>
+
+    <section id="add-book-display" class="container show-hide section__input">
+      <!-- hidden -->
+      <h2 class="title__container">Tambah Buku Baru</h2>
+      <form action="#" id="add-book">
+        <div class="input__wrapper">
+          <label for="title">Judul</label>
+          <input type="text" id="title" name="title" maxlength="70" required>
+        </div>
+        <div class="input__wrapper">
+          <label for="author">Penulis</label>
+          <input type="text" id="author" name="author" maxlength="70" required>
+        </div>
+        <div class="input__wrapper">
+          <label for="year">Tahun</label>
+          <input type="number" id="year" name="year" required>
+        </div>
+        <div class="input__checkbox">
+          <label for="readCheck">Selesai Dibaca</label>
+          <input type="checkbox" id="read-check" name="readCheck" value="isComplete">
+        </div>
+        <div class="input__wrapper">
+          <button type="submit" id="book-submit">Simpan</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="container book__shelf">
+      <h2 class="title__container">Belum Selesai Dibaca</h2>
+      <div class="book__list" id="book-not-complete">
+        <!-- <div class="book__item">
+          <div class="book__detail">
+            <h3 class="book__title">Harry Potters and The Magic</h3>
+            <p>Penulis: Harry</p>
+            <p>Tahun: 2015</p>
+          </div>
+          <div class="book___action">
+            <button class="checklist__button" title="Selesai Dibaca"></button>
+            <button class="delete__button" title="Hapus Buku"></button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="container book__shelf">
+      <h2 class="title__container">Selesai Dibaca</h2>
+      <div class="book__list" id="book-complete">
+        <!-- <div class="book__item">
+          <div class="book__detail">
+            <h3 class="book__title">Harry Potters and The Magic</h3>
+            <p>Penulis: Harry</p>
+            <p>Tahun: 2015</p>
+          </div>
+          <div class="book___action">
+            <button class="undo__button" title="Belum Selesai Dibaca"></button>
+            <button class="delete__button" title="Hapus Buku"></button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </main>
+  <section class="modal__wrapper" id="delete-wrapper">
+    <div class="modal__card" id="delete-card">
+      <h2 class="modal__title">Anda yakin ingin menghapus buku?</h2>
+      <div class="modal__action" id="modal-action">
+        <button class="no__action" id="no-action">Batal</button>
+        <button class="yes__action" id="yes-action">Hapus</button>
+      </div>
+    </div>
+  </section>
+  <section class="modal__wrapper" id="edit-wrapper">
+    <div class="modal__card" id="edit-card">
+      <h2 class="modal__title">Ubah Data Buku</h2>
+      <div class="modal__body section__input">
+        <form action="#" id="edit-book">
+          <div class="input__wrapper">
+            <label for="title">Judul</label>
+            <input type="text" id="edit-title" name="title" maxlength="70" required>
+          </div>
+          <div class="input__wrapper">
+            <label for="author">Penulis</label>
+            <input type="text" id="edit-author" name="author" maxlength="70" required>
+          </div>
+          <div class="input__wrapper">
+            <label for="year">Tahun</label>
+            <input type="number" id="edit-year" name="year" required>
+          </div>
+          <div class="input__checkbox">
+            <label for="readCheck">Selesai Dibaca</label>
+            <input type="checkbox" id="edit-read-check" name="readCheck" value="isComplete">
+          </div>
+          <div class="input__wrapper">
+            <button type="submit" id="book-submit">Simpan Perubahan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="modal__message" id="modal-message">
+    <div class="modal__wrap" id="modal-wrap">
+      <div class="modal__search__data show-hide" id="modal-search-data">
+        <p>Buku tidak ditemukan!</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Created by &#10084; <a href="https://github.com/miftahuljna127">Miftahul Janna</a></p>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
